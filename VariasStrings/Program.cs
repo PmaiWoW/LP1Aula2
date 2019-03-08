@@ -8,29 +8,47 @@ namespace VariasStrings
         {
             Console.OutputEncoding = Encoding.UTF8;
 
+            double xx = 0.12345;
+            int ii = 18;
+
+            //strings com interpolação e verbatim
             string s = "\u028A - this right here is called Upsilon, my d00ds";
-            string r = "C:\\Users\\user\\Documents";
-            string f = @"C:\\Users\\user\\Documents";
-            string g = @"This aint no \n why isn't new line working\n\n\n?!";
-            string e = "\"isto está tudo entre aspas, what shame...\"";
-            string t = @"""fogo, isto também está entre aspas? damn, why?""";
-            Console.WriteLine("1st string:"+s+"\n2nd string:"+r+"\n3rd string:"
-                +f+"\n4th string:"+g+"\n5th string:"+e+"\n6th string:"+t);
+            string s1 = "C:\\Users\\user\\Documents";
+            string s2 = @"C:\\Users\\user\\Documents";
+            string s3 = @"This aint no \n why isn't new line working\n\n\n?!";
+            string s4 = "\"isto está tudo entre aspas, what shame...\"";
+            string s5 = @"""fogo, isto também está entre aspas? damn, why?""";
+            Console.WriteLine("1st string:"+s+"\n2nd string:"+s1+"\n" +
+                "3rd string:"+s2+"\n4th string:"+s3+"\n5th string:"+s4+"\n" +
+                "6th string:"+s5+"\n");
 
-            string x = "Wow " + "These + signs " + "are kinda sticky...";
-            string y = "why are these numbers sticking to my side??" + 223551;
+            //strings com concatenação
+            string r = "Wow " + "These + signs " + "are kinda sticky...";
+            string r1 = "why are these numbers sticking to my side?? " + 2351;
 
-            int p = 23;
-            int l = 89;
-            string z = $"{p} is way lower than {l}";
-            string c = $@"we have the best of both worlds here, {l} is big";
+            int x = 1;
+            int y = 89;
+            string r2 = $"{x} is way lower than {y}";
+            string r3 = $@"we have the best of both worlds here, {y} is big";
 
-            string m = String.Format("{1} > {0}", p, l);
-            string n = String.Format("the {1} is quite big, at least {0}km " +
-                "thicc i say", 1, "world");
+            string r4 = String.Format("{1} < {0}", y, x);
+            string r5 = String.Format("the {1} is quite big, at least {0}km " +
+                "thicc i say", x, "world");
 
-            Console.WriteLine(x + "\n" + y + "\n" + z + "\n" + c + "\n" + m + 
-                "\n" + n);
+            Console.WriteLine(r + "\n" + r1 + "\n" + r2 + "\n" + r3 + "\n" + r4
+                + "\n" + r5);
+
+            // teste com strings formatadas
+            double x1 = 2.5352;
+            string t = $"x={x:f1}";
+            Console.WriteLine(t);
+
+            //strings formatadas p/ o exercício 3 da aula 2
+            string t1 = $"\nxx Real = {xx:f2}\nxx Percentagem = {xx:p1}";
+            Console.WriteLine(t1);
+
+            Console.WriteLine("\nii Hexadec = {0:x}\nii Moeda = {0:c}", ii);
+            
             Console.ReadKey();
         }
     }
