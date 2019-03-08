@@ -8,8 +8,8 @@ namespace Cilindro
         {
             //Declarar variáveis
             string hStr, radStr;
-            float h, rad, vol, surfArea;
-            float pi = 3.1415926f;
+            float h, rad, pi, radPow2, vol, surfArea;
+            pi = Convert.ToSingle(Math.PI);
 
             //Pedir altura do cilindro ao utilizador e converter p/ float
             Console.WriteLine("Input the cilinder's height:");
@@ -20,7 +20,8 @@ namespace Cilindro
             radStr = Console.ReadLine();
             rad = Convert.ToSingle(radStr);
             //calcular volume e área da superfície
-            vol = pi * (rad*rad) * h;
+            radPow2 = Convert.ToSingle(Math.Pow(rad, 2));
+            vol = pi * radPow2 * h;
             surfArea = 2 * pi * rad * (rad + h);
 
             /*Mostrar os resultados ao utilizador(usa duas maneiras diferentes
