@@ -35,6 +35,26 @@ namespace ValoresEspeciais
             Console.WriteLine("NaN(Double): " + 
                 (double.PositiveInfinity / double.PositiveInfinity));
 
+            //Criar variáveis contendo os valores máximos
+            //Testar e fazer print de overflows em tipos inteiros
+            short i1 = short.MaxValue;
+            long i2 = long.MaxValue;
+            sbyte i3 = sbyte.MaxValue;
+            int i4 = int.MaxValue;
+            byte i5 = byte.MaxValue;
+            ushort i6 = ushort.MaxValue;
+            uint i7 = uint.MaxValue;
+            ulong i8 = ulong.MaxValue;
+
+            Console.WriteLine("\nOverflow(Short): " + (short) (i1 + 1));
+            Console.WriteLine("Overflow(Long): " + (i2 + 1));
+            Console.WriteLine("Overflow(sByte): " + (sbyte)(i3 + 1));
+            Console.WriteLine("Overflow(Int): " + (i4 + 1));
+            Console.WriteLine("Overflow(Byte): " + (byte)(i5 + 1));
+            Console.WriteLine("Overflow(uShort): " + (ushort)(i6 + 1));
+            Console.WriteLine("Overflow(uInt): " + (uint)(i7 + 1));
+            Console.WriteLine("Overflow(uLong): " + (ulong)(i8 + 1));
+
             Console.ReadKey();
         }
     }
