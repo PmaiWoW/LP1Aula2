@@ -39,7 +39,6 @@ namespace ValoresEspeciais
                 (double.PositiveInfinity / double.PositiveInfinity));
 
             //Criar variáveis contendo os valores máximos
-            //Testar e fazer print de overflows em tipos inteiros
             short i1 = short.MaxValue;
             long i2 = long.MaxValue;
             sbyte i3 = sbyte.MaxValue;
@@ -51,7 +50,7 @@ namespace ValoresEspeciais
             float j1 = float.MaxValue;
             double j2 = double.MaxValue;
 
-
+            //Testar e fazer print de overflow em tipos inteiros
             Console.WriteLine("\nOverflow(Short): " + (short) (i1 + 1));
             Console.WriteLine("Overflow(Long): " + (i2 + 1));
             Console.WriteLine("Overflow(sByte): " + (sbyte)(i3 + 1));
@@ -61,10 +60,18 @@ namespace ValoresEspeciais
             Console.WriteLine("Overflow(uInt): " + (uint)(i7 + 1));
             Console.WriteLine("Overflow(uLong): " + (ulong)(i8 + 1));
 
-            //Testar e fazer print de overflows em tipos reais
+            //Testar e fazer print de overflow em tipos reais
             Console.WriteLine("Overflow(Float): " + j1 * 2);
             Console.WriteLine("Overflow(1st Double): " + j2 * 2);
             Console.WriteLine("Overflow(2nd Double, not altered): " + (j2 + 1));
+
+            //Criar variáveis para testes de underflow
+            float f1, f2;
+            f1 = f2 = 15753.0f;
+
+            //Testar e fazer print de underflow em tipos reais
+            Console.WriteLine("\nUnderflow de Floats:\n" + (f1 == f2 + 
+                0.000001f));
 
             Console.ReadKey();
         }
