@@ -7,27 +7,34 @@ namespace ValoresEspeciais
         static void Main(string[] args)
         {
             Console.WriteLine("Integer:\nMax: " + int.MaxValue + "   Min: "
-                + int.MinValue);
-            Console.WriteLine("Unsigned Integer:\nMax: " + uint.MaxValue +
+                + int.MinValue + "\nUnsigned Integer:\nMax: " + uint.MaxValue +
                 "   Min: " + uint.MinValue);
-            Console.WriteLine("Byte:\nMax: " + byte.MaxValue + "   Min: " +
-                byte.MinValue);
-            Console.WriteLine("SByte:\nMax: " + sbyte.MaxValue + "   Min: " +
-                sbyte.MinValue);
-            Console.WriteLine("Long:\nMax: " + long.MaxValue + "   Min: " +
-                long.MinValue);
-            Console.WriteLine("Unsigned Long:\nMax: " + ulong.MaxValue + 
+            Console.WriteLine("\nByte:\nMax: " + byte.MaxValue + "   Min: " +
+                byte.MinValue + "\nSByte:\nMax: " + sbyte.MaxValue + 
+                "   Min: " + sbyte.MinValue);
+            Console.WriteLine("\nLong:\nMax: " + long.MaxValue + "   Min: " +
+                long.MinValue + "\nUnsigned Long:\nMax: " + ulong.MaxValue + 
                 "   Min: " + ulong.MinValue);
-            Console.WriteLine("Short:\nMax: " + short.MaxValue +"   Min: " + 
-                short.MinValue);
-            Console.WriteLine("Unsigned Short:\nMax: " + ushort.MaxValue +
+            Console.WriteLine("\nShort:\nMax: " + short.MaxValue +"   Min: " + 
+                short.MinValue + "\nUnsigned Short:\nMax: " + ushort.MaxValue +
                 "   Min: " + short.MinValue);
-            Console.WriteLine("Double:\nMax: " + double.MaxValue + "   Min: "
-                + double.MinValue);
-            Console.WriteLine("Float:\nMax: " + float.MaxValue + "   Min: " +
-                float.MinValue);
-            Console.WriteLine("Decimal:\nMax: " + decimal.MaxValue + 
-                "   Min: " + decimal.MinValue);
+            Console.WriteLine("\nDouble:\nMax: " + double.MaxValue + "   Min: "
+                + double.MinValue + "\nFloat:\nMax: " + float.MaxValue + 
+                "   Min: " + float.MinValue + "\nDecimal:\nMax: " + 
+                decimal.MaxValue + "   Min: " + decimal.MinValue);
+
+            //Infinites & NaN (Float)
+            Console.WriteLine("\nPositive Infinite(Float): " + 
+                float.PositiveInfinity + "Negative Infinite(Float): " + 
+                float.NegativeInfinity);
+            Console.WriteLine("Nan(Float): " + float.NaN);
+            //Infinites & NaN (Double)
+            Console.WriteLine("\nPositive Infinite(Double): " +
+                double.PositiveInfinity + "\nNegative Infinite(Double): " +
+                double.NegativeInfinity);
+            Console.WriteLine("NaN(Double): " + 
+                (double.PositiveInfinity / double.PositiveInfinity));
+
             Console.ReadKey();
         }
     }
