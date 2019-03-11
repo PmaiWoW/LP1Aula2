@@ -25,7 +25,7 @@ namespace Cilindro
             surfArea = 2 * pi * rad * (rad + h);
 
             /*Mostrar os resultados ao utilizador(usa duas maneiras diferentes
-            para praticar as mesmas, por nenhuma rãzão especial*/
+            para praticar as mesmas, por nenhuma razão especial*/
             Console.WriteLine($"Cilinder's Volume = {vol:f3}");
             Console.WriteLine("Cilinder's Surface Area = {0:f3}", 
                 surfArea);

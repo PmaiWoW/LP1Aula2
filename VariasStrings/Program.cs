@@ -40,7 +40,7 @@ namespace VariasStrings
 
             // teste com strings formatadas
             double x1 = 2.5352;
-            string t = $"x={x:f1}";
+            string t = $"x={x1:f1}";
             Console.WriteLine(t);
 
             //strings formatadas p/ o exercício 3 da aula 2
