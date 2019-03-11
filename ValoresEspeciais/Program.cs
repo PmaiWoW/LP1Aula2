@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace ValoresEspeciais
 {
@@ -6,6 +7,8 @@ namespace ValoresEspeciais
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             Console.WriteLine("Integer:\nMax: " + int.MaxValue + "   Min: "
                 + int.MinValue + "\nUnsigned Integer:\nMax: " + uint.MaxValue +
                 "   Min: " + uint.MinValue);
@@ -45,6 +48,9 @@ namespace ValoresEspeciais
             ushort i6 = ushort.MaxValue;
             uint i7 = uint.MaxValue;
             ulong i8 = ulong.MaxValue;
+            float j1 = float.MaxValue;
+            double j2 = double.MaxValue;
+
 
             Console.WriteLine("\nOverflow(Short): " + (short) (i1 + 1));
             Console.WriteLine("Overflow(Long): " + (i2 + 1));
@@ -54,6 +60,11 @@ namespace ValoresEspeciais
             Console.WriteLine("Overflow(uShort): " + (ushort)(i6 + 1));
             Console.WriteLine("Overflow(uInt): " + (uint)(i7 + 1));
             Console.WriteLine("Overflow(uLong): " + (ulong)(i8 + 1));
+
+            //Testar e fazer print de overflows em tipos reais
+            Console.WriteLine("Overflow(Float): " + j1 * 2);
+            Console.WriteLine("Overflow(1st Double): " + j2 * 2);
+            Console.WriteLine("Overflow(2nd Double, not altered): " + (j2 + 1));
 
             Console.ReadKey();
         }
